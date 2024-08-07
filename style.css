@@ -1,0 +1,317 @@
+/* Base styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 2% 4%;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 0;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background: red;
+    color: white;
+    padding: 0.8% 1.5%;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.english-logo {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 7px 12px;
+}
+
+.world-logo {
+    margin-right: 5px;
+}
+
+button img {
+    width: 15px;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-weight: 600;
+    max-width: 90%;
+}
+
+.content h3 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-top: -20px;
+}
+
+p {
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+.signup {
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.signup input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.signup button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.signupbutton {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* Features Section */
+.features {
+    padding: 5% 10%;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.text-column, .features-image, .oppo-text-column, .oppo-features-image {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.features-image img, .oppo-features-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.features p {
+    font-size: 1.5rem;
+}
+
+/* FAQs Section */
+.frequently {
+    padding: 5% 10%;
+}
+
+.frequently h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.according {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.according li {
+    list-style: none;
+    padding: 5px;
+}
+
+.according li label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 1.8rem;
+    position: absolute;
+    right: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.according .contain {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.according input[type="radio"]:checked + label + .contain {
+    max-height: 600px;
+    padding: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        padding: 4% 2%;
+    }
+
+    .logo {
+        height: 2rem;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .content h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .signup {
+        flex-direction: column;
+    }
+
+    .signup input {
+        font-size: 0.9rem;
+    }
+
+    .signup button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .features {
+        padding: 5% 2%;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .features p {
+        font-size: 1.2rem;
+    }
+
+    .rows {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 4% 1%;
+    }
+
+    .logo {
+        height: 1.5rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .content h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .signup {
+        margin-top: 1.5rem;
+    }
+
+    .signup input {
+        font-size: 0.8rem;
+    }
+
+    .signup button {
+        font-size: 0.8rem;
+    }
+
+    .features {
+        padding: 5% 1%;
+    }
+
+    .features h2 {
+        font-size: 1.8rem;
+    }
+
+    .features p {
+        font-size: 1rem;
+    }
+
+    .rows {
+        flex-direction: column;
+    }
+}
